@@ -1,0 +1,124 @@
+/* Browse.css */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to separate search bar from thumbnails */
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px; /* Increase padding for larger size */
+    font-size: 18px; /* Increase font size */
+    border: none;
+    border-radius: 20px; /* Make it more rounded */
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+  }
+  
+  .search-bar button {
+    padding: 20px 30px;
+    margin-left: 20px;
+    background-color: #01010f;
+    border: none; /* Remove border */
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+  }
+  
+  .search-bar button:hover {
+    background-color: #980f48;
+  }
+  
+  .book-item {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 150px; /* Set width to prevent overlap with search bar */
+    text-align: center; /* Center align text */
+  }
+  
+  .book-item:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+  }
+  
+  .book-item img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-details {
+    position: absolute;
+    bottom: -40px; /* Adjust position to move titles below the image */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hide details by default */
+  }
+  
+  .book-item:hover .book-details {
+    opacity: 1; /* Show details on hover */
+  }
+  
+  .book-details p {
+    margin: 1;
+  }
+  
+  .search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+   
+  
+  .filter-button {
+    margin-right: 10px;
+    padding: 20px 30px; /* Decrease padding to make buttons smaller */
+    background-color: #000000;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; /* Display buttons inline */
+    font-size: 20px;
+  }
+  
+  .filter-button:hover {
+    background-color: #a70845;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 30;
+    z-index: 1;
+  }
+  
+  .dropdown-content button {
+    display: block;
+    width: auto; /* Remove fixed width */
+    padding: 20px 30px; /* Decrease padding to make buttons smaller */
+    margin-right: 5px; /* Add margin to separate buttons */
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+  .dropdown-content button:hover {
+    background-color: #f0f0f0;
+  }
+  
