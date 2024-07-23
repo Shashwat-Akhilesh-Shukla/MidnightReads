@@ -97,43 +97,35 @@ button {
 }
 
 .sub-menu {
-  position: relative;
-  overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease-out;
-}
-
-.sub-menu ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
+  overflow: hidden;
 }
 
 .sub-menu.open {
   max-height: 500px;
+  transition: max-height 0.5s ease-in;
 }
 
-.sub-menu button {
-  padding-left: 54px;
+.sub-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
 }
 
-.sub-menu button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 22px;
-  translate: 0 -50%;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: rgb(255 255 255 / 35%);
+.sub-menu ul li {
+  margin: 5px 0;
 }
 
+.sub-menu ul li button {
+  padding-left: 20px;
+  font-size: 14px;
+}
 
 .rotate-icon {
   transform: rotate(180deg);
-  transition: transform 0.3s ease;
+  transition:ease-in-out;
 }
 
 

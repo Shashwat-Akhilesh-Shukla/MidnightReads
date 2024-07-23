@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './slider.css'; // Import your CSS file
 
-const Slider = () => {
+const Slider = ({ onPdfSelect }) => {
   // State variables
   const [value, setValue] = useState(0); // Transform value
   const [trailValue, setTrailValue] = useState(0); // Trail index number
@@ -12,23 +12,28 @@ const Slider = () => {
   const slidesData = [
     {
       title: "A Thousand Splendid Suns",
-      image: "img1.jpeg" // Add the URL for the book cover image
+      image: "img1.jpeg", // Add the URL for the book cover image
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
     },
     {
       title: "A Little Life",
-      image: "img2.jpeg"
+      image: "img2.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
     },
     {
       title: "Kite Runner",
-      image: "img3.jpeg"
+      image: "img3.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
     },
     {
       title: "Crime and Punishment",
-      image: "img6.jpeg"
+      image: "img6.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
     },
     {
       title: "Half girlfriend",
-      image: "img8.jpeg"
+      image: "img8.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
     }
   ];
 
@@ -61,6 +66,12 @@ const Slider = () => {
     trail[T].classList.add("active");
   };
 
+  // Event handler for image click
+  const handleImageClick = (pdfUrl) => {
+    // Open PDF in a new window
+    window.open(pdfUrl, '_blank');
+  };
+
   return (
     <div className="container">
       <div className="slider">
@@ -70,12 +81,11 @@ const Slider = () => {
             <div className="details">
               <h1>{slide.title}</h1>
               <p>{slide.content}</p>
-              <button>Read Now</button>
+              <button id='readnow' onClick={() => handleImageClick(slide.pdfUrl)}>Read Now</button>
             </div>
-            
             <div className="illustration">
               <div className="inner">
-                <img src={slide.image} alt={`Book cover for ${slide.title}`} />
+                <img src={slide.image} alt={`Book cover for ${slide.title}`} onClick={() => handleImageClick(slide.pdfUrl)}/>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css'; 
+import './App.css';
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
+const Sidebar = ({ isSidebarOpen, toggleSidebar, handleTabChange }) => {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   
   const toggleSubMenu = (index) => {
@@ -19,7 +19,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     {
       name: 'Write',
       icon: 'ai-folder-add',
-      subMenuItems: ['Article', 'poem', 'novel', 'just something random'],
+      subMenuItems: ['Article', 'Poem', 'Novel', 'Just Something Random'],
     },
     {
       name: 'Profile',
@@ -37,7 +37,10 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
       <ul>
         {menuItems.map((item, index) => (
           <li key={item.name}>
-            <button type="button" onClick={() => toggleSubMenu(index)}>
+            <button 
+              type="button" 
+              onClick={() => item.subMenuItems ? toggleSubMenu(index) : handleTabChange(item.name)}
+            >
               <i className={item.icon}></i>
               <p>{item.name}</p>
               {item.subMenuItems && (
@@ -45,7 +48,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               )}
             </button>
             {item.subMenuItems && (
-              <div className="sub-menu" style={{ maxHeight: activeSubMenu === index ? '500px' : '0', overflow: 'hidden' }}>
+              <div className={`sub-menu ${activeSubMenu === index ? 'open' : ''}`}>
                 <ul>
                   {item.subMenuItems.map((subItem, subIndex) => (
                     <li key={subIndex}>
