@@ -5,6 +5,7 @@ import './App.css';
 
 const Navbar = ({ toggleSidebar, activeTab, handleTabChange }) => {
   
+  
   return (
     <nav className="navbar">
       <button onClick={toggleSidebar}>
@@ -17,6 +18,7 @@ const Navbar = ({ toggleSidebar, activeTab, handleTabChange }) => {
         <li className={activeTab === 'Browse' ? 'active' : ''} onClick={() => handleTabChange('Browse')}>
           Browse
         </li>
+        
       </ul>
     </nav>
   );
