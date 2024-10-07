@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/css/main.1ed564c2.css",
+    "main.js": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/js/main.8e41576c.js",
+    "static/js/453.9e572f08.chunk.js": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/js/453.9e572f08.chunk.js",
+    "static/media/bg.jpeg": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/media/bg.a695f2f205d3245fd438.jpeg",
+    "index.html": "/Shashwat-Akhilesh-Shukla/MidnightReads/index.html",
+    "main.1ed564c2.css.map": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/css/main.1ed564c2.css.map",
+    "main.8e41576c.js.map": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/js/main.8e41576c.js.map",
+    "453.9e572f08.chunk.js.map": "/Shashwat-Akhilesh-Shukla/MidnightReads/static/js/453.9e572f08.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ed564c2.css",
+    "static/js/main.8e41576c.js"
+  ]
+}
