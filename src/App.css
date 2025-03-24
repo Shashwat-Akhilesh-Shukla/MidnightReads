@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-image: url("C:/Users/passi/OneDrive/Desktop/my codes/MidnightReads/readverse-app/src/bg.jpeg");
+  background-image: url("public/bg.jpeg");
   background-size: cover;
   z-index: 0;
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@ button {
   left: 0;
   background-color: transparent;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
@@ -175,6 +175,7 @@ button {
   margin-left: 20px;
   font-size: 20px;
   cursor: pointer;
+  justify-content: space-between;
   color: #fff; /* Change text color */
 }
 
@@ -182,6 +183,36 @@ button {
   font-weight: bold;
 }
 
+.nav-left {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-left li.active {
+  font-weight: bold;
+}
+
 .browse-tab {
   min-height: calc(100vh - 60px); /* Subtract navbar height */
 }
+
+
+.profile-icon {
+  position: relative;
+  margin-left: auto; /* Ensures it is pushed to the extreme right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;        /* Set the width of the background box */
+  height: 48px;       /* Set the height of the background box */
+  background-color: black; /* Background box color */
+  border-radius: 8px;  /* Gives the black box a slight rounded corner */
+  cursor: pointer;
+}
+
+.profile-icon svg {
+  color: white;       /* Color of the icon */
+  font-size: 3rem;    /* Double the icon size */
+}
+
+

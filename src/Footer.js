@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <img src="logo.svg" alt="Company logo" className="logo" />
+        <img src="\logo.svg" alt="Company logo" className="logo" />
         <div className="footer-links">
           <div className="footer-section">
             <h2>MidnightReads</h2>

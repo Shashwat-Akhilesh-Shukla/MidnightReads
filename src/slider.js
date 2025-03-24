@@ -12,30 +12,31 @@ const Slider = ({ onPdfSelect }) => {
   const slidesData = [
     {
       title: "A Thousand Splendid Suns",
-      image: "img1.jpeg", // Add the URL for the book cover image
-      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
+      image: process.env.PUBLIC_URL + "/img1.jpeg", // Add the absolute URL for the book cover image
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6606e21f694eb1775c95e449',
     },
     {
       title: "A Little Life",
-      image: "img2.jpeg",
-      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
+      image: process.env.PUBLIC_URL + "/img2.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6606e21f694eb1775c95e449',
     },
     {
       title: "Kite Runner",
-      image: "img3.jpeg",
-      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
+      image: process.env.PUBLIC_URL + "/img3.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6606e21f694eb1775c95e449',
     },
     {
       title: "Crime and Punishment",
-      image: "img6.jpeg",
-      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
+      image: process.env.PUBLIC_URL + "/img6.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6606e21f694eb1775c95e449',
     },
     {
       title: "Half girlfriend",
-      image: "img8.jpeg",
-      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6626aa9961afaabc3cdffedf',
+      image: process.env.PUBLIC_URL + "/img8.jpeg",
+      pdfUrl:  'http://127.0.0.1:8000/fetch-book/6606e21f694eb1775c95e449',
     }
   ];
+  
 
   useEffect(() => {
     startRef.current = setInterval(() => slide("increase"), interval); // Assign value to 'startRef.current'
